@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3od-Jr-0ip">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Weather Interface Controller-->
+        <scene sceneID="79i-ab-Q91">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="3od-Jr-0ip" customClass="WeatherInterfaceController" customModule="Weather_WatchKit_Extension">
+                    <items>
+                        <imageView width="40" height="40" alignment="left" id="Br5-Ze-hjQ"/>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="6Cy-vN-akg">
+                            <items>
+                                <label width="1" alignment="left" text="33" textAlignment="center" id="wgg-RD-9rb">
+                                    <color key="textColor" red="0.82241564402283063" green="1" blue="0.40713626836423544" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="42"/>
+                                </label>
+                                <group width="1" alignment="left" id="5U5-Xh-LyT">
+                                    <items>
+                                        <label alignment="left" text="Moscow" textAlignment="center" id="W7N-CS-gSp">
+                                            <color key="textColor" red="1" green="0.79764407994799258" blue="0.35371186202697047" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                        </label>
+                                        <label alignment="right" text="34%" textAlignment="center" id="0LJ-Ca-PRN">
+                                            <color key="textColor" red="0.48988326744541177" green="0.40841575710950262" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="cityLabel" destination="W7N-CS-gSp" id="y9r-a1-Va0"/>
+                        <outlet property="humidityLabel" destination="0LJ-Ca-PRN" id="VxY-ao-QHj"/>
+                        <outlet property="temperatureLabel" destination="wgg-RD-9rb" id="SPV-0F-eb3"/>
+                        <outlet property="weatherImage" destination="Br5-Ze-hjQ" id="Bka-Mp-JlB"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="444" y="224"/>
         </scene>
     </scenes>
 </document>
